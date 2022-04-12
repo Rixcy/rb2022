@@ -1,5 +1,12 @@
 import { style } from '@vanilla-extract/css'
-import { vars } from './theme.css'
+import { fonts, vars } from './theme.css'
+
+export const title = style([
+  fonts['5xl'],
+  {
+    fontWeight: 'bold',
+  },
+])
 
 export const intro = style({
   maxWidth: '35.5rem',

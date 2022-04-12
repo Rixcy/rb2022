@@ -18,7 +18,7 @@ const Home: NextPage = () => {
       <Header />
 
       <main>
-        <p>Hello, I&apos;m Rick Booth</p>
+        <p className={s.title}>Hello, I&apos;m Rick Booth</p>
         <p className={s.intro}>
           Senior Frontend Developer based in Newcastle. Currently at{' '}
           <ExternalLink href="https://progressionapp.com">

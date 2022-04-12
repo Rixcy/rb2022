@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import { vars } from '../styles/theme.css'
+import { fonts, vars } from '../styles/theme.css'
 
 export const header = style({
   display: 'flex',
@@ -9,10 +9,12 @@ export const header = style({
   flexDirection: 'row',
 })
 
-export const title = style({
-  fontSize: '1.5rem',
-  fontWeight: 'bold',
-})
+export const title = style([
+  fonts['2xl'],
+  {
+    fontWeight: 'bold',
+  },
+])
 
 export const nav = style({
   display: 'flex',

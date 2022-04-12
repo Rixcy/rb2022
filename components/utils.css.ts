@@ -9,8 +9,8 @@ export const link = style({
   outline: 'none',
   selectors: {
     '&:is(:focus-within, :hover)::after': {
-      opacity: 1,
-      transform: 'translate3d(0, 0, 0)',
+      transform: 'scaleX(1)',
+      transformOrigin: 'bottom left',
     },
   },
   '::after': {
@@ -21,9 +21,9 @@ export const link = style({
     left: 0,
     width: '100%',
     height: '0.1em',
-    backgroundColor: vars.color.theme[300],
-    opacity: 0,
-    transition: 'opacity 300ms, transform 300ms',
-    transform: 'translate3d(-100%, 0, 0)',
+    background: `linear-gradient(90deg, ${vars.color.theme[300]} 0%, ${vars.color.theme[500]} 100%)`,
+    transition: 'transform 200ms ease-out',
+    transform: 'scaleX(0)',
+    transformOrigin: 'bottom right',
   },
 })

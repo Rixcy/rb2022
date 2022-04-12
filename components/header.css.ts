@@ -27,12 +27,12 @@ export const item = recipe({
     textTransform: 'uppercase',
     fontWeight: 'bold',
     ':hover': {
-      color: vars.color.theme[600],
+      color: vars.color.theme[300],
     },
   },
   variants: {
     active: {
-      true: { color: vars.color.theme[600] },
+      true: { color: vars.color.theme[300] },
     },
   },
 })

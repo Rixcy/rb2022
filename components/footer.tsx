@@ -1,4 +1,4 @@
-import { SrOnly } from './utils'
+import { ExternalLink, SrOnly } from './utils'
 import * as s from './footer.css'
 
 export const Footer = () => {
@@ -67,9 +67,9 @@ const Link = (props: LinkProps) => {
   const { href, label } = props
 
   return (
-    <a className={s.link} href={href} target="_blank" rel="noreferrer noopener">
+    <ExternalLink href={href} className={s.link}>
       {label}
-    </a>
+    </ExternalLink>
   )
 }
 

@@ -17,6 +17,7 @@ export const [themeClass, vars] = createTheme({
     white: '#fff',
     black: '#000',
     grey: '#666',
+    lightGrey: '#a3a3a3',
   },
   space: {
     1: '0.25rem',

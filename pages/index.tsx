@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { Footer } from '../components/footer'
 import { Header } from '../components/header'
 import * as globalStyles from '../styles/global.css'
 
@@ -14,9 +15,11 @@ const Home: NextPage = () => {
 
       <Header />
 
-      <main>Content</main>
+      <main>
+        <p>Hello, I&apos;m Rick Booth</p>
+      </main>
 
-      <footer>Footer</footer>
+      <Footer />
     </div>
   )
 }

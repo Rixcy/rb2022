@@ -1,5 +1,6 @@
 import { ExternalLink, SrOnly } from './utils'
 import * as s from './footer.css'
+import { Fragment } from 'react'
 
 export const Footer = () => {
   return (
@@ -29,10 +30,10 @@ const LocationList = () => (
   <ul className={s.locationList}>
     <SrOnly>Working locations:</SrOnly>
     {locations.map((location, index) => (
-      <>
+      <Fragment key={index}>
         <li>{location}</li>
         {index < locations.length - 1 && <span aria-hidden>•</span>}
-      </>
+      </Fragment>
     ))}
   </ul>
 )
@@ -50,10 +51,10 @@ const LinksList = () => (
   <ul className={s.linksList}>
     <SrOnly>Links:</SrOnly>
     {links.map((link, index) => (
-      <>
+      <Fragment key={index}>
         <Link key={link.href} {...link} />
         {index < links.length - 1 && <span aria-hidden>/</span>}
-      </>
+      </Fragment>
     ))}
   </ul>
 )

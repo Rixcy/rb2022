@@ -6,7 +6,12 @@ import { themeClass } from '../styles/theme.css'
 export default function Document() {
   return (
     <Html>
-      <Head />
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.css"
+        ></link>
+      </Head>
       <body className={cn(themeClass, app)}>
         <Main />
         <NextScript />

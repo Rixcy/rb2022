@@ -3,9 +3,8 @@ import { join } from 'path'
 import fs from 'fs'
 import { DateTime } from 'luxon'
 import { Post, postSchema } from './types'
-import { remark } from 'remark'
-import html from 'remark-html'
 import { z } from 'zod'
+import { bundleMDX } from 'mdx-bundler'
 
 const getSlugFromFileName = (fileName: string): string => {
   return fileName.replace(/\.mdx$/, '')
@@ -17,17 +16,32 @@ export async function getPostBySlug(slug: string): Promise<Post> {
   const realSlug = slug.replace(/\.mdx$/, '')
   const fullPath = join(postsDirectory, `${realSlug}.mdx`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const { data, content } = matter(fileContents)
-  const publishedOn = DateTime.fromJSDate(data.publishedOn).toISO()
 
-  // Use remark to convert markdown into HTML string
-  const processedContent = await remark().use(html).process(content)
-  const contentHtml = processedContent.toString()
+  const result = await bundleMDX({
+    source: fileContents,
+    mdxOptions: (options) => {
+      options.remarkPlugins = [
+        ...(options.remarkPlugins ?? []),
+        [
+          require('remark-prism'),
+          {
+            transformInlineCode: true,
+          },
+        ],
+      ]
+
+      return options
+    },
+  })
+
+  const publishedOn = DateTime.fromJSDate(
+    result.frontmatter.publishedOn
+  ).toISO()
 
   const postData = {
     slug: realSlug,
-    meta: { ...data, publishedOn },
-    content: contentHtml,
+    meta: { ...result.frontmatter, publishedOn },
+    content: result.code,
   }
   return postSchema.parse(postData)
 }

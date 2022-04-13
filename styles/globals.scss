@@ -43,3 +43,10 @@ a {
   stroke: url(#linear);
   fill: url(#linear);
 }
+
+.post a {
+  color: #a5b4fc;
+  &:hover {
+    text-decoration: underline;
+  }
+}

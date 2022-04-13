@@ -1,6 +1,8 @@
 import * as s from './post.css'
 import Link from 'next/link'
 import { Date } from '../date'
+import { useMemo } from 'react'
+import { getMDXComponent } from 'mdx-bundler/client'
 
 type PostLayoutProps = {
   title: string
@@ -10,6 +12,10 @@ type PostLayoutProps = {
 
 export const PostLayout = (props: PostLayoutProps) => {
   const { children, publishedOn, title } = props
+
+  const Component = useMemo(() => {
+    return getMDXComponent(children)
+  }, [children])
 
   return (
     <>
@@ -28,7 +34,9 @@ export const PostLayout = (props: PostLayoutProps) => {
         <Date className={s.date} date={publishedOn} />
       </div>
       <hr className={s.separator} />
-      <div dangerouslySetInnerHTML={{ __html: children }} />
+      <div className="post">
+        <Component />
+      </div>
     </>
   )
 }

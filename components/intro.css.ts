@@ -29,7 +29,7 @@ export const avatarWrapper = style({
 export const name = style({
   color: 'transparent',
   backgroundClip: 'text',
-  backgroundImage: `linear-gradient(to right, ${vars.color.white}, ${vars.color.theme[300]}, ${vars.color.theme[500]})`,
+  backgroundImage: `linear-gradient(to right, ${vars.color.white}, ${vars.color.theme[300]}, ${vars.color.theme[400]})`,
   whiteSpace: 'nowrap',
 })
 

@@ -1,5 +1,7 @@
 import '../styles/globals.scss'
 import '../styles/theme.css'
+import '@fontsource/inconsolata'
+import '@fontsource/inconsolata/700.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { MDXProvider } from '@mdx-js/react'

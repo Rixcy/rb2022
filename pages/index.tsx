@@ -6,6 +6,7 @@ import { Projects } from '../components/projects'
 import * as globalStyles from '../styles/global.css'
 import { getPosts } from '../utils/post'
 import { RecentPosts } from '../components/posts'
+import { Work } from '../components/work'
 
 const Home: NextPage = ({
   posts,
@@ -16,6 +17,7 @@ const Home: NextPage = ({
       <div className={globalStyles.content}>
         <Intro />
         <Projects />
+        <Work />
         <RecentPosts posts={posts} />
       </div>
       <Footer />

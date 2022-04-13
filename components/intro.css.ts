@@ -15,6 +15,7 @@ export const contentWrapper = style({
 })
 
 export const avatarWrapper = style({
+  marginTop: vars.space[6],
   flex: 1,
   display: 'none',
   alignItems: 'baseline',

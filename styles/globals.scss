@@ -35,12 +35,11 @@ a {
 }
 
 .avatar .glasses {
-  transition: all 0.2s ease-out;
   stroke: white;
   fill: white;
 }
 
 .avatar:hover .glasses {
-  stroke: #818cf8;
-  fill: #818cf8;
+  stroke: url(#linear);
+  fill: url(#linear);
 }

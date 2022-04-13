@@ -1,18 +1,25 @@
 import { style } from '@vanilla-extract/css'
-import { fonts, vars } from '../../styles/theme.css'
+import { fonts, screen, vars } from '../../styles/theme.css'
 
 export const item = style([
   fonts.lg,
   {
     outline: 'none',
     display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: 'column',
     width: '100%',
     columnGap: vars.space[4],
+    marginBottom: vars.space[4],
     selectors: {
       '&:hover, &:focus-within': {
         color: vars.color.theme[400],
+      },
+    },
+    '@media': {
+      [screen.sm]: {
+        marginBottom: 0,
+        flexDirection: 'row',
+        alignItems: 'center',
       },
     },
   },
@@ -23,9 +30,15 @@ export const separator = style({
   borderColor: 'rgb(38 38 38)',
   borderTopWidth: '1px',
   borderTopStyle: 'dashed',
+  display: 'none',
   selectors: {
     [`${item}:hover &, ${item}:focus-within &`]: {
       borderTopColor: vars.color.theme[400],
+    },
+  },
+  '@media': {
+    [screen.sm]: {
+      display: 'block',
     },
   },
 })

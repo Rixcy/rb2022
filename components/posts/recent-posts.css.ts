@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { fonts, vars } from '../../styles/theme.css'
+import { fonts, screen, vars } from '../../styles/theme.css'
 
 export const recentPosts = style({
   listStyle: 'none',
@@ -11,9 +11,14 @@ export const recentPosts = style({
 
 export const post = style({
   display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  alignItems: 'center',
+  flexDirection: 'column',
+  '@media': {
+    [screen.sm]: {
+      alignItems: 'center',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    },
+  },
 })
 
 export const link = style([

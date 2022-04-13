@@ -32,7 +32,7 @@ export const title = style([
   fonts['5xl'],
   {
     fontWeight: 'bold',
-    marginTop: 0,
+    marginTop: vars.space[6],
     marginBottom: vars.space[6],
   },
 ])

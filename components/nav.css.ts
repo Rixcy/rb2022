@@ -63,8 +63,24 @@ export const item = recipe({
     fontWeight: 'bold',
     color: vars.color.theme[300],
     transition: 'color 200ms ease-out',
+    selectors: {
+      '&:focus-within::before, &:focus-within::after, &:hover::before, &:hover::after':
+        {
+          transition: 'color 200ms ease-out',
+          color: vars.color.theme[400],
+        },
+    },
+    '::before': {
+      content: '> ',
+      color: vars.color.theme[300],
+      opacity: 0,
+    },
+    '::after': {
+      content: ' <',
+      color: vars.color.theme[300],
+      opacity: 0,
+    },
     ':focus-within': {
-      textDecoration: 'underline',
       color: vars.color.theme[400],
     },
     ':hover': {
@@ -73,7 +89,17 @@ export const item = recipe({
   },
   variants: {
     active: {
-      true: { color: vars.color.theme[400] },
+      true: {
+        selectors: {
+          '&:hover::before, &:hover::after': {
+            transition: 'color 200ms ease-out',
+            color: vars.color.theme[400],
+          },
+          '&::after, &::before': {
+            opacity: 1,
+          },
+        },
+      },
     },
   },
 })

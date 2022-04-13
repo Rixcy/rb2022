@@ -5,7 +5,7 @@ export const recentPosts = style({
   listStyle: 'none',
   display: 'flex',
   flexDirection: 'column',
-  rowGap: vars.space[6],
+  rowGap: vars.space[2],
   marginBottom: vars.space[12],
 })
 

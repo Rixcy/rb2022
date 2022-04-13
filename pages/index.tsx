@@ -26,7 +26,7 @@ const Home: NextPage = ({
 export default Home
 
 export const getStaticProps: GetStaticProps = () => {
-  const posts = getPosts(2)
+  const posts = getPosts(3)
 
   return { props: { posts } }
 }

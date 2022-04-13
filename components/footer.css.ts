@@ -9,6 +9,7 @@ export const footer = style({
 export const name = style([
   fonts['3xl'],
   {
+    marginTop: 0,
     fontWeight: 'bold',
     textTransform: 'uppercase',
     marginBottom: 0,

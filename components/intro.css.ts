@@ -3,14 +3,33 @@ import { fonts, screen, vars } from '../styles/theme.css'
 
 export const intro = style({
   display: 'flex',
-  flexDirection: 'column',
+  flexDirection: 'row',
   marginTop: vars.space[4],
   marginBottom: vars.space[4],
   '@media': {
     [screen.sm]: {
-      maxWidth: '35.5rem',
       marginTop: vars.space[12],
       marginBottom: vars.space[8],
+    },
+  },
+})
+
+export const contentWrapper = style({
+  '@media': {
+    [screen.sm]: {
+      maxWidth: '35.5rem',
+    },
+  },
+})
+
+export const avatarWrapper = style({
+  flex: 1,
+  display: 'none',
+  alignItems: 'baseline',
+  justifyContent: 'flex-end',
+  '@media': {
+    [screen.md]: {
+      display: 'flex',
     },
   },
 })

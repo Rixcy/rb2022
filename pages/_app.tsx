@@ -1,3 +1,4 @@
+import NextNProgress from 'nextjs-progressbar'
 import cn from 'classnames'
 import '../styles/globals.scss'
 import '../styles/theme.css'
@@ -13,6 +14,8 @@ import * as gs from '../styles/global.css'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <MDXProvider>
+      <NextNProgress color="#818cf8" options={{ showSpinner: false }} />
+
       <Head>
         <title>RICK BOOTH - FRONTEND DEVELOPER</title>
         <meta

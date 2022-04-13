@@ -2,11 +2,12 @@ import { keyframes, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { fonts, vars } from '../styles/theme.css'
 
-export const header = style({
+export const nav = style({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
   flexDirection: 'row',
+  paddingTop: vars.space[6],
 })
 
 const cursorBlink = keyframes({
@@ -42,10 +43,9 @@ export const title = style([
   },
 ])
 
-export const nav = style({
+export const items = style({
   display: 'flex',
   flexDirection: 'row',
-  padding: vars.space[8],
   gap: vars.space[2],
 })
 

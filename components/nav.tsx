@@ -1,19 +1,19 @@
 import Link from 'next/link'
 import cn from 'classnames'
 import { useRouter } from 'next/router'
-import * as s from './header.css'
+import * as s from './nav.css'
 
 const links = [{ href: '/', label: 'Home' }]
 
-export const Header = () => {
+export const Nav = () => {
   const router = useRouter()
 
   return (
-    <header className={s.header}>
+    <nav className={s.nav}>
       <Link href="/" passHref>
         <a className={s.title}>RB.ME</a>
       </Link>
-      <nav className={s.nav}>
+      <div className={s.items}>
         {links.map((link) => (
           <Link href={link.href} passHref key={link.href}>
             <a
@@ -23,7 +23,7 @@ export const Header = () => {
             </a>
           </Link>
         ))}
-      </nav>
-    </header>
+      </div>
+    </nav>
   )
 }

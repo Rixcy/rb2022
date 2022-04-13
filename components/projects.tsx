@@ -23,6 +23,10 @@ const projects: Project[] = [
       'Quick and dirty Airbnb clone, just the front page for now, WIP',
   },
   {
+    href: 'https://github.com/Rixcy/rb2022',
+    name: 'RB2022 (This site)',
+  },
+  {
     href: 'https://github.com/Rixcy/components',
     name: 'Components',
   },
@@ -35,16 +39,12 @@ const projects: Project[] = [
     name: 'Vite React starter',
   },
   {
-    href: 'https://github.com/Rixcy/react-component-library',
-    name: 'React component library lemplate',
+    href: 'https://github.com/Rixcy/nextjs-starter',
+    name: 'NextJS starter',
   },
   {
     href: 'https://github.com/Rixcy/blog-rails',
     name: 'Rails blog',
-  },
-  {
-    href: 'https://github.com/Rixcy/nextjs-starter',
-    name: 'NextJS starter',
   },
 ]
 

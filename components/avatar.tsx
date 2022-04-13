@@ -9,8 +9,8 @@ export const Avatar = () => (
   >
     <defs>
       <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#a5b4fc" />
-        <stop offset="100%" stop-color="#818cf8" />
+        <stop offset="0%" stopColor="#a5b4fc" />
+        <stop offset="100%" stopColor="#818cf8" />
       </linearGradient>
     </defs>
     <path

@@ -1,6 +1,7 @@
 import * as s from './posts-list.css'
 import { Posts } from '../../utils/post'
 import { Date } from '../date'
+import Link from 'next/link'
 
 export const PostsList = ({ posts }: { posts: Posts }) => {
   return (
@@ -9,9 +10,9 @@ export const PostsList = ({ posts }: { posts: Posts }) => {
       <div className={s.posts}>
         {posts.map((post, index) => (
           <article key={index}>
-            <a className={s.title} href={`/posts/${post.slug}`}>
-              {post.title}
-            </a>
+            <Link href={`/posts/${post.slug}`} passHref>
+              <a className={s.title}>{post.title}</a>
+            </Link>
             <Date className={s.date} date={post.publishedOn} />
           </article>
         ))}

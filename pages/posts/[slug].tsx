@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next'
+import Head from 'next/head'
 import invariant from 'tiny-invariant'
 import { PostLayout } from '../../components/posts'
 import { getAllPostSlugs, getPostBySlug } from '../../utils/post'
@@ -9,12 +10,22 @@ const Post = (props: { postData: Post }) => {
     postData: { content, meta },
   } = props
 
+  const name = encodeURIComponent('RICK BOOTH')
+  const title = encodeURIComponent(meta.title)
+
   return (
-    <PostLayout
-      children={content}
-      publishedOn={meta.publishedOn}
-      title={meta.title}
-    />
+    <>
+      <Head>
+        <title>{meta.title} - RICK BOOTH</title>
+        <meta
+          property="og:image"
+          content={`api/og-image?name=${name}&stage=${title}`}
+        />
+      </Head>
+      <PostLayout publishedOn={meta.publishedOn} title={meta.title}>
+        {content}
+      </PostLayout>
+    </>
   )
 }
 

@@ -1,7 +1,5 @@
 import { ExternalLink, PageTitle } from './utils'
 import * as s from './intro.css'
-import Image from 'next/image'
-import avatar from '../public/avatar.svg'
 import { Section } from './section'
 import { Avatar } from './avatar'
 
@@ -22,7 +20,6 @@ export const Intro = () => (
     </div>
     <div className={s.avatarWrapper}>
       <Avatar />
-      {/* <Image src={avatar} alt="" height="150" width="150" /> */}
     </div>
   </Section.Root>
 )

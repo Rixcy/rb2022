@@ -4,15 +4,16 @@ import { screen, vars } from './theme.css'
 export const app = style({
   color: vars.color.white,
   backgroundColor: vars.color.black,
+  display: 'flex',
+  flexDirection: 'column',
 })
 
 export const container = style({
   display: 'flex',
-  flexDirection: 'column',
   maxWidth: '80rem',
   marginLeft: 'auto',
   marginRight: 'auto',
-  minHeight: '100vh',
+  width: '100%',
   paddingLeft: vars.space[2],
   paddingRight: vars.space[2],
   '@media': {
@@ -27,8 +28,13 @@ export const container = style({
   },
 })
 
+export const main = style({
+  flex: 1,
+})
+
 export const content = style({
   display: 'flex',
   flexDirection: 'column',
   flex: 1,
+  width: '100%',
 })

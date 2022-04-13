@@ -2,13 +2,28 @@ import { keyframes, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { fonts, screen, vars } from '../styles/theme.css'
 
+export const content = style({
+  width: '100%',
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  flexDirection: 'row',
+  paddingTop: vars.space[4],
+  paddingBottom: vars.space[4],
+})
+
 export const nav = style({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
   flexDirection: 'row',
-  paddingTop: vars.space[6],
-  marginBottom: vars.space[4],
+  backdropFilter: 'saturate(180%) blur(20px)',
+  WebkitBackdropFilter: 'saturate(180%) blur(20px)',
+  boxShadow: 'rgba(0, 0, 0, 0.12) 0px 1px 3px',
+  position: 'sticky',
+  top: 0,
+  zIndex: 10,
+  backgroundColor: 'rgba(50, 50, 50, 0.62)',
   '@media': {
     [screen.sm]: {
       marginBottom: vars.space[12],

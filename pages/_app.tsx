@@ -1,3 +1,4 @@
+import cn from 'classnames'
 import '../styles/globals.scss'
 import '../styles/theme.css'
 import '@fontsource/inconsolata'
@@ -5,6 +6,9 @@ import '@fontsource/inconsolata/700.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { MDXProvider } from '@mdx-js/react'
+import { Nav } from '../components/nav'
+import { Footer } from '../components/footer'
+import * as gs from '../styles/global.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -34,7 +38,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Component {...pageProps} />
+      <Nav />
+      <main className={cn(gs.container, gs.main, gs.content)}>
+        <Component {...pageProps} />
+      </main>
+      <Footer />
     </MDXProvider>
   )
 }

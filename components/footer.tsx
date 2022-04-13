@@ -1,10 +1,12 @@
 import { ExternalLink, SrOnly } from './utils'
+import cn from 'classnames'
 import * as s from './footer.css'
+import * as gs from '../styles/global.css'
 import { Fragment } from 'react'
 
 export const Footer = () => {
   return (
-    <footer className={s.footer}>
+    <footer className={cn(s.footer, gs.container)}>
       <Name />
       <JobTitle />
       <LocationList />

@@ -1,14 +1,15 @@
-import { ExternalLink } from './utils'
+import { ExternalLink, PageTitle } from './utils'
 import * as s from './intro.css'
 import Image from 'next/image'
 import avatar from '../public/avatar.png'
+import { Section } from './section'
 
 export const Intro = () => (
-  <main className={s.intro}>
+  <Section.Root className={s.intro}>
     <div className={s.contentWrapper}>
-      <p className={s.title}>
-        Hello, I&apos;m <span className={s.name}>Rick Booth</span>
-      </p>
+      <PageTitle>
+        Hey, I&apos;m <span className={s.name}>Rick Booth</span>
+      </PageTitle>
       <p className={s.content}>
         Senior Frontend Developer based in Newcastle. Currently working at{' '}
         <ExternalLink href="https://progressionapp.com">
@@ -21,5 +22,5 @@ export const Intro = () => (
     <div className={s.avatarWrapper}>
       <Image src={avatar} alt="" height="150" width="150" />
     </div>
-  </main>
+  </Section.Root>
 )

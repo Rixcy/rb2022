@@ -1,6 +1,6 @@
 import { keyframes, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import { fonts, vars } from '../styles/theme.css'
+import { fonts, screen, vars } from '../styles/theme.css'
 
 export const nav = style({
   display: 'flex',
@@ -8,6 +8,12 @@ export const nav = style({
   alignItems: 'center',
   flexDirection: 'row',
   paddingTop: vars.space[6],
+  marginBottom: vars.space[4],
+  '@media': {
+    [screen.sm]: {
+      marginBottom: vars.space[12],
+    },
+  },
 })
 
 const cursorBlink = keyframes({
@@ -46,7 +52,7 @@ export const title = style([
 export const items = style({
   display: 'flex',
   flexDirection: 'row',
-  gap: vars.space[2],
+  gap: vars.space[4],
 })
 
 export const item = recipe({
@@ -67,7 +73,7 @@ export const item = recipe({
   },
   variants: {
     active: {
-      true: { color: vars.color.theme[300] },
+      true: { color: vars.color.theme[400] },
     },
   },
 })

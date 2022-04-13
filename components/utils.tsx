@@ -24,3 +24,7 @@ export const ExternalLink = (
     </a>
   )
 }
+
+export const PageTitle = ({ children }: { children: ReactNode }) => (
+  <h1 className={s.title}>{children}</h1>
+)

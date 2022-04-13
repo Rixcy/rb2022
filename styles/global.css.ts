@@ -7,9 +7,12 @@ export const app = style({
 })
 
 export const container = style({
+  display: 'flex',
+  flexDirection: 'column',
   maxWidth: '80rem',
   marginLeft: 'auto',
   marginRight: 'auto',
+  minHeight: '100vh',
   paddingLeft: vars.space[2],
   paddingRight: vars.space[2],
   '@media': {
@@ -22,4 +25,10 @@ export const container = style({
       paddingRight: vars.space[8],
     },
   },
+})
+
+export const content = style({
+  display: 'flex',
+  flexDirection: 'column',
+  flex: 1,
 })

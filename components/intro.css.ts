@@ -4,14 +4,6 @@ import { fonts, screen, vars } from '../styles/theme.css'
 export const intro = style({
   display: 'flex',
   flexDirection: 'row',
-  marginTop: vars.space[4],
-  marginBottom: vars.space[4],
-  '@media': {
-    [screen.sm]: {
-      marginTop: vars.space[12],
-      marginBottom: vars.space[8],
-    },
-  },
 })
 
 export const contentWrapper = style({
@@ -33,15 +25,6 @@ export const avatarWrapper = style({
     },
   },
 })
-
-export const title = style([
-  fonts['5xl'],
-  {
-    fontWeight: 'bold',
-    marginTop: 0,
-    marginBottom: vars.space[6],
-  },
-])
 
 export const name = style({
   color: 'transparent',

@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { vars } from '../styles/theme.css'
+import { fonts, vars } from '../styles/theme.css'
 
 export const link = style({
   display: 'inline-flex',
@@ -27,3 +27,12 @@ export const link = style({
     transformOrigin: 'bottom right',
   },
 })
+
+export const title = style([
+  fonts['5xl'],
+  {
+    fontWeight: 'bold',
+    marginTop: 0,
+    marginBottom: vars.space[6],
+  },
+])

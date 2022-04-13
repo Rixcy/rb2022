@@ -3,7 +3,10 @@ import cn from 'classnames'
 import { useRouter } from 'next/router'
 import * as s from './nav.css'
 
-const links = [{ href: '/', label: 'Home' }]
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/posts', label: 'Posts' },
+]
 
 export const Nav = () => {
   const router = useRouter()

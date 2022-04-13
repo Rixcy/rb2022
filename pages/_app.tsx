@@ -2,10 +2,11 @@ import '../styles/globals.css'
 import '../styles/theme.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import { MDXProvider } from '@mdx-js/react'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <MDXProvider>
       <Head>
         <title>RICK BOOTH - FRONTEND DEVELOPER</title>
         <meta
@@ -32,7 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <Component {...pageProps} />
-    </>
+    </MDXProvider>
   )
 }
 

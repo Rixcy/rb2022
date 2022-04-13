@@ -1,5 +1,6 @@
 import { ExternalLink } from './utils'
 import * as s from './projects.css'
+import { Section } from './section'
 
 type Project = { href: string; name: string; description?: string }
 
@@ -50,12 +51,12 @@ const projects: Project[] = [
 
 export const Projects = () => {
   return (
-    <section className={s.wrapper}>
-      <h2 className={s.title}>Projects</h2>
+    <Section.Root>
+      <Section.Title>Projects</Section.Title>
       <div className={s.projects}>
         {projects.map((project, index) => (
           <article key={index}>
-            <ExternalLink className={s.project} href={project.href}>
+            <ExternalLink className={s.name} href={project.href}>
               {project.name}
             </ExternalLink>
             {project.description && (
@@ -64,6 +65,6 @@ export const Projects = () => {
           </article>
         ))}
       </div>
-    </section>
+    </Section.Root>
   )
 }

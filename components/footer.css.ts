@@ -3,6 +3,7 @@ import { fonts, vars } from '../styles/theme.css'
 
 export const footer = style({
   color: vars.color.grey,
+  marginBottom: vars.space[6],
 })
 
 export const name = style([

@@ -1,0 +1,24 @@
+---
+title: Quickly jumping between directories with Autojump
+publishedOn: 2022-04-13
+---
+
+[Autojump](https://github.com/wting/autojump) is a command line utility for quickly jumping between previously visited folders. It works by maintaining a database of the directories you use the most from the command line.
+
+If you need to jump between folders frequently, instead of manually writing out `cd ../other-project` you could use `j oth` which would jump you to the nearest folder fuzzily matching `oth`.
+
+Or between a couple of projects:
+
+```bash
+$ j app
+$ pwd
+# /Users/rixcy/Projects/my-app
+
+$ j lib
+$ pwd
+# /Users/rixcy/Projects/my-library
+```
+
+## Installation
+
+Full installation instructions can be found on the README (here)[https://github.com/wting/autojump#installation]. If you're on a Mac and use Homebrew you can just run `brew install autojump`.

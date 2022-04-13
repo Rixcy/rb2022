@@ -1,10 +1,6 @@
 import { style } from '@vanilla-extract/css'
 import { fonts, vars } from '../styles/theme.css'
 
-export const wrapper = style({
-  paddingBottom: vars.space[6],
-})
-
 export const title = style(fonts['2xl'])
 
 export const projects = style({
@@ -13,10 +9,12 @@ export const projects = style({
   columnGap: vars.space[8],
 })
 
-export const project = style([
+export const name = style([
   fonts.lg,
   {
+    textTransform: 'uppercase',
     marginBottom: vars.space[2],
+    letterSpacing: '2px',
   },
 ])
 

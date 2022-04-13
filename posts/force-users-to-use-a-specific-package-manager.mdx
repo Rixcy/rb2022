@@ -1,0 +1,40 @@
+---
+title: Force users to use a specific package manager
+publishedOn: 2021-05-13
+---
+
+Sometimes you might want to force users to use a certain package manager like Yarn or NPM to prevent conflicting lockfiles from being created. A nice way of doing this is to use the only-allow package.
+
+## Installation
+
+Add a `preinstall` script to your project's `package.json`.
+
+If you want to force **[npm](https://docs.npmjs.com/cli/npm)**, add:
+
+```json
+{
+  "scripts": {
+    "preinstall": "npx only-allow npm"
+  }
+}
+```
+
+If you want to force **[pnpm](https://pnpm.js.org/)**, add:
+
+```json
+{
+  "scripts": {
+    "preinstall": "npx only-allow pnpm"
+  }
+}
+```
+
+If you want to force **[yarn](https://yarnpkg.com/)**, add:
+
+```json
+{
+  "scripts": {
+    "preinstall": "npx only-allow yarn"
+  }
+}
+```

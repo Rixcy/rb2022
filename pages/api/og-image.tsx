@@ -49,7 +49,7 @@ interface QueryParams {
 
 export default withOGImage<'query', QueryParams>({
   template: {
-    react: async ({ name, stage }) => {
+    react: async ({ title }) => {
       return (
         <html>
           <head>
@@ -62,7 +62,7 @@ export default withOGImage<'query', QueryParams>({
           <body>
             <div className="container">
               <div className="titleWrapper">
-                <h1>{stage}</h1>
+                <h1>{title}</h1>
                 <p>RICKBOOTH.ME</p>
               </div>
               <div>

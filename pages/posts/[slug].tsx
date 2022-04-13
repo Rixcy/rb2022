@@ -10,7 +10,6 @@ const Post = (props: { postData: Post }) => {
     postData: { content, meta },
   } = props
 
-  const name = encodeURIComponent('RICK BOOTH')
   const title = encodeURIComponent(meta.title)
 
   return (
@@ -19,7 +18,7 @@ const Post = (props: { postData: Post }) => {
         <title>{meta.title} - RICK BOOTH</title>
         <meta
           property="og:image"
-          content={`api/og-image?name=${name}&stage=${title}`}
+          content={`https://rb2022.vercel.app/api/og-image?title=${title}`}
         />
       </Head>
       <PostLayout publishedOn={meta.publishedOn} title={meta.title}>

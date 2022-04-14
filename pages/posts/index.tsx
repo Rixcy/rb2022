@@ -10,7 +10,7 @@ const PostListPage: NextPage = ({
     <>
       <Head>
         <title>POSTS - RICK BOOTH</title>
-        <meta property="og:title" content="Posts" />
+        <meta property="og:title" content="Rick Booth - Posts" />
         <meta
           property="og:image"
           content="https://rb2022.vercel.app/api/og-image?title=POSTS"

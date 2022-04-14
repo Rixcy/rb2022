@@ -1,4 +1,4 @@
-import { ExternalLink, PageTitle } from './utils'
+import { ExternalLink, GradientText, PageTitle } from './utils'
 import * as s from './intro.css'
 import { Section } from './section'
 import { Avatar } from './avatar'
@@ -7,7 +7,7 @@ export const Intro = () => (
   <Section.Root className={s.intro}>
     <div className={s.contentWrapper}>
       <PageTitle>
-        Hey, I&apos;m <span className={s.name}>Rick Booth</span>
+        Hey, I&apos;m <GradientText>Rick Booth</GradientText>
       </PageTitle>
       <p className={s.content}>
         Senior Frontend Developer based in Newcastle. Currently working at{' '}

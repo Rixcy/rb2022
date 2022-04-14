@@ -28,3 +28,7 @@ export const ExternalLink = (
 export const PageTitle = ({ children }: { children: ReactNode }) => (
   <h1 className={s.title}>{children}</h1>
 )
+
+export const GradientText = ({ children }: { children: ReactNode }) => (
+  <span className={s.gradientText}>{children}</span>
+)

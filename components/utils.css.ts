@@ -36,3 +36,10 @@ export const title = style([
     marginBottom: vars.space[6],
   },
 ])
+
+export const gradientText = style({
+  color: 'transparent',
+  backgroundClip: 'text',
+  backgroundImage: `linear-gradient(to right, ${vars.color.white}, ${vars.color.theme[300]}, ${vars.color.theme[400]})`,
+  whiteSpace: 'nowrap',
+})

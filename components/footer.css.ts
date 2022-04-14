@@ -17,10 +17,15 @@ export const name = style([
   },
 ])
 
+export const jobTitle = style({
+  marginBottom: 0,
+})
+
 export const locationList = style({
   listStyle: 'none',
   display: 'flex',
   flexDirection: 'row',
+  marginBottom: 0,
   gap: vars.space[2],
   padding: 0,
 })
@@ -31,6 +36,7 @@ export const linksList = style([
     listStyle: 'none',
     display: 'flex',
     flexDirection: 'row',
+    marginBottom: 0,
     gap: vars.space[2],
     padding: 0,
   },

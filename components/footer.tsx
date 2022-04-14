@@ -21,7 +21,7 @@ const name = 'Rick Booth'
 const Name = () => <p className={s.name}>{name}</p>
 
 const JobTitle = () => (
-  <p>
+  <p className={s.jobTitle}>
     <SrOnly>Job title:</SrOnly>Senior Frontend Developer
   </p>
 )

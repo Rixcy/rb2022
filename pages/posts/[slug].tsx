@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import invariant from 'tiny-invariant'
+import { useConfig } from '../../components/config'
 import { PostLayout } from '../../components/posts'
 import { getAllPostSlugs, getPostBySlug } from '../../utils/post'
 import { Post } from '../../utils/types'
@@ -10,12 +11,16 @@ const Post = (props: { postData: Post }) => {
     postData: { content, meta, excerpt },
   } = props
 
+  const { uppercaseName } = useConfig()
+
   const title = encodeURIComponent(meta.title)
 
   return (
     <>
       <Head>
-        <title>{meta.title} - RICK BOOTH</title>
+        <title>
+          {meta.title} - {uppercaseName}
+        </title>
         <meta property="og:title" content={meta.title} />
         <meta property="og:type" content="article" />
         <meta

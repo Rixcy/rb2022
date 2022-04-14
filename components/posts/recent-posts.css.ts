@@ -5,8 +5,13 @@ export const recentPosts = style({
   listStyle: 'none',
   display: 'flex',
   flexDirection: 'column',
-  rowGap: vars.space[2],
+  rowGap: vars.space[4],
   marginBottom: vars.space[12],
+  '@media': {
+    [screen.sm]: {
+      rowGap: vars.space[2],
+    },
+  },
 })
 
 export const post = style({
@@ -34,8 +39,8 @@ export const link = style([
 ])
 
 export const date = style([
-  fonts.sm,
+  fonts.lg,
   {
-    color: vars.color.lightGrey,
+    color: vars.color.grey,
   },
 ])

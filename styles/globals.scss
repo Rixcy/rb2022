@@ -2,9 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Inconsolata', -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
+  font-family: 'Inconsolata', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+    monospace;
 }
 
 a {
@@ -49,4 +48,15 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  font-family: 'Inconsolata', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+    monospace;
+  line-height: 1.5;
+}
+
+:not(pre) > code[class*='language-'] {
+  padding: 1px 5px;
 }

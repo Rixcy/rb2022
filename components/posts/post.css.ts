@@ -4,6 +4,7 @@ import { fonts, screen, vars } from '../../styles/theme.css'
 export const header = style({
   display: 'flex',
   flexDirection: 'column',
+  marginTop: vars.space[6],
   paddingBottom: vars.space[2],
   marginBottom: vars.space[2],
   '@media': {

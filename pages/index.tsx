@@ -5,22 +5,19 @@ import { getPosts } from '../utils/post'
 import { RecentPosts } from '../components/posts'
 import { Work } from '../components/work'
 import Head from 'next/head'
+import { useConfig } from '../components/config'
 
 const Home: NextPage = ({
   posts,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const { baseTitle, baseDescription, baseOgImageUrl } = useConfig()
+
   return (
     <>
       <Head>
-        <meta property="og:title" content="Rick Booth - Frontend Developer" />
-        <meta
-          property="og:image"
-          content="https://rb2022.vercel.app/api/og-image?title=RICK BOOTH - FRONTEND DEVELOPER"
-        />
-        <meta
-          property="og:description"
-          content="Rick Booth is Senior Frontend Developer based in Newcastle. Working at Progression on Design Systems and building out the front end for an app specialising in building career frameworks."
-        />
+        <meta property="og:title" content={baseTitle} />
+        <meta property="og:description" content={baseDescription} />
+        <meta property="og:image" content={baseOgImageUrl} />
       </Head>
       <Intro />
       <Projects />

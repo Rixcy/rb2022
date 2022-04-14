@@ -1,6 +1,10 @@
 import { style } from '@vanilla-extract/css'
 import { fonts, vars } from '../../styles/theme.css'
 
+export const postsList = style({
+  marginTop: vars.space[6],
+})
+
 export const posts = style({
   listStyle: 'none',
   display: 'flex',

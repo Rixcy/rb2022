@@ -30,7 +30,7 @@ export const avatarWrapper = style({
 export const content = style([
   fonts['2xl'],
   {
-    marginTop: 0,
+    margin: 0,
     color: vars.color.lightGrey,
   },
 ])

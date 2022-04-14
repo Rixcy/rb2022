@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export const PostsList = ({ posts }: { posts: Posts }) => {
   return (
-    <main>
+    <main className={s.postsList}>
       <h1 className="sr-only">Posts</h1>
       <div className={s.posts}>
         {posts.map((post, index) => (

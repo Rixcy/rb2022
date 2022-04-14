@@ -3,6 +3,7 @@ import cn from 'classnames'
 import * as s from './footer.css'
 import * as gs from '../styles/global.css'
 import { Fragment } from 'react'
+import { useConfig } from './config'
 
 export const Footer = () => {
   return (
@@ -16,15 +17,20 @@ export const Footer = () => {
   )
 }
 
-const name = 'Rick Booth'
+const Name = () => {
+  const { name } = useConfig()
+  return <p className={s.name}>{name}</p>
+}
 
-const Name = () => <p className={s.name}>{name}</p>
-
-const JobTitle = () => (
-  <p className={s.jobTitle}>
-    <SrOnly>Job title:</SrOnly>Senior Frontend Developer
-  </p>
-)
+const JobTitle = () => {
+  const { jobTitle } = useConfig()
+  return (
+    <p className={s.jobTitle}>
+      <SrOnly>Job title:</SrOnly>
+      {jobTitle}
+    </p>
+  )
+}
 
 const locations = ['Newcastle', 'London', 'Skipton']
 
@@ -76,8 +82,11 @@ const Link = (props: LinkProps) => {
   )
 }
 
-const CopyrightNotice = () => (
-  <p className={s.copyrightNotice}>
-    &copy; {new Date().getFullYear()} {name}
-  </p>
-)
+const CopyrightNotice = () => {
+  const { name } = useConfig()
+  return (
+    <p className={s.copyrightNotice}>
+      &copy; {new Date().getFullYear()} {name}
+    </p>
+  )
+}

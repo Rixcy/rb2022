@@ -56,3 +56,8 @@ export const screen = {
   lg: '(min-width: 1024px)',
   xl: '(min-width: 1280px)',
 }
+
+export const motion = {
+  enabled: '(prefers-reduced-motion: no-preference)',
+  disabled: '(prefers-reduced-motion: reduce)',
+}

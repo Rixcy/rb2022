@@ -1,6 +1,6 @@
 import { keyframes, style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import { fonts, screen, vars } from '../styles/theme.css'
+import { fonts, motion, screen, vars } from '../styles/theme.css'
 
 export const content = style({
   width: '100%',
@@ -43,9 +43,13 @@ export const title = style([
     fontWeight: 'bold',
     outline: 'none',
     position: 'relative',
-    selectors: {
-      '&:hover::after': {
-        display: 'inline-block',
+    '@media': {
+      [motion.enabled]: {
+        selectors: {
+          '&::after': {
+            display: 'inline-block',
+          },
+        },
       },
     },
     ':focus-within': {
@@ -77,11 +81,20 @@ export const item = recipe({
     textTransform: 'uppercase',
     fontWeight: 'bold',
     color: vars.color.theme[300],
-    transition: 'color 200ms ease-out',
+    '@media': {
+      [motion.enabled]: {
+        transition: 'color 200ms ease-out',
+        selectors: {
+          '&:focus-within::before, &:focus-within::after, &:hover::before, &:hover::after':
+            {
+              transition: 'color 200ms ease-out',
+            },
+        },
+      },
+    },
     selectors: {
       '&:focus-within::before, &:focus-within::after, &:hover::before, &:hover::after':
         {
-          transition: 'color 200ms ease-out',
           color: vars.color.theme[400],
         },
     },
@@ -105,9 +118,17 @@ export const item = recipe({
   variants: {
     active: {
       true: {
+        '@media': {
+          [motion.enabled]: {
+            selectors: {
+              '&:hover::before, &:hover::after': {
+                transition: 'color 200ms ease-out',
+              },
+            },
+          },
+        },
         selectors: {
           '&:hover::before, &:hover::after': {
-            transition: 'color 200ms ease-out',
             color: vars.color.theme[400],
           },
           '&::after, &::before': {

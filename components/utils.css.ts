@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
-import { fonts, vars } from '../styles/theme.css'
+import { fonts, motion, vars } from '../styles/theme.css'
 
 export const link = style({
   display: 'inline-flex',
@@ -7,6 +7,16 @@ export const link = style({
   position: 'relative',
   overflow: 'hidden',
   outline: 'none',
+  '@media': {
+    [motion.disabled]: {
+      ':hover': {
+        textDecoration: 'underline',
+      },
+      '::after': {
+        display: 'none',
+      },
+    },
+  },
   selectors: {
     '&:is(:focus-within, :hover)::after': {
       transform: 'scaleX(1)',

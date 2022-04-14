@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Features
+
+### Reduced motion
+
+Animations are disabled for the following if the reduce motion preference is set to reduce:
+
+- Nav blinking cursor
+- Nav link hover transition
+- Animated link underlines
+
 ## Getting Started
 
 First, run the development server:

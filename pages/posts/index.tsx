@@ -15,6 +15,10 @@ const PostListPage: NextPage = ({
           property="og:image"
           content="https://rb2022.vercel.app/api/og-image?title=POSTS"
         />
+        <meta
+          property="og:description"
+          content="Rick Booth is Senior Frontend Developer based in Newcastle. Working at Progression on Design Systems and building out the front end for an app specialising in building career frameworks."
+        />
       </Head>
       <PostsList posts={posts} />
     </>

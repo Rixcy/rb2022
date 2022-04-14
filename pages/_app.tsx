@@ -18,11 +18,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <Head>
         <title>RICK BOOTH - FRONTEND DEVELOPER</title>
-        <meta property="og:title" content="Rick Booth - Frontend Developer" />
-        <meta
-          property="og:image"
-          content="https://rb2022.vercel.app/api/og-image?title=RICK BOOTH - FRONTEND DEVELOPER"
-        />
         <meta
           name="description"
           content="Rick Booth is Senior Frontend Developer based in Newcastle. Working at Progression on Design Systems and building out the front end for an app specialising in building career frameworks."

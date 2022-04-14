@@ -32,6 +32,12 @@ export async function getPostBySlug(slug: string): Promise<Post> {
 
       return options
     },
+    grayMatterOptions: (options) => {
+      options.excerpt = true
+      options.excerpt_separator = '$endexcerpt'
+
+      return options
+    },
   })
 
   const publishedOn = DateTime.fromJSDate(
@@ -42,6 +48,7 @@ export async function getPostBySlug(slug: string): Promise<Post> {
     slug: realSlug,
     meta: { ...result.frontmatter, publishedOn },
     content: result.code,
+    excerpt: result.matter.excerpt,
   }
   return postSchema.parse(postData)
 }

@@ -7,7 +7,7 @@ import { Post } from '../../utils/types'
 
 const Post = (props: { postData: Post }) => {
   const {
-    postData: { content, meta },
+    postData: { content, meta, excerpt },
   } = props
 
   const title = encodeURIComponent(meta.title)
@@ -22,6 +22,7 @@ const Post = (props: { postData: Post }) => {
           property="og:image"
           content={`https://rb2022.vercel.app/api/og-image?title=${title}`}
         />
+        {excerpt && <meta property="og:description" content={excerpt} />}
       </Head>
       <PostLayout publishedOn={meta.publishedOn} title={meta.title}>
         {content}

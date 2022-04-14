@@ -16,6 +16,8 @@ const Post = (props: { postData: Post }) => {
     <>
       <Head>
         <title>{meta.title} - RICK BOOTH</title>
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:type" content="article" />
         <meta
           property="og:image"
           content={`https://rb2022.vercel.app/api/og-image?title=${title}`}

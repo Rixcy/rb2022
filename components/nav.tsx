@@ -6,7 +6,7 @@ import * as gs from '../styles/global.css'
 
 const links = [
   { href: '/', label: 'Home' },
-  { href: '/posts', label: 'Posts' },
+  { href: '/posts', label: 'Posts', partialMatch: true },
 ]
 
 export const Nav = () => {
@@ -23,7 +23,11 @@ export const Nav = () => {
             <Link href={link.href} passHref key={link.href}>
               <a
                 className={cn(
-                  s.item({ active: router.pathname === link.href })
+                  s.item({
+                    active: link.partialMatch
+                      ? router.pathname.includes(link.href)
+                      : router.pathname === link.href,
+                  })
                 )}
               >
                 {link.label}

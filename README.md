@@ -5,9 +5,12 @@ My personal portfolio site built using NextJS.
 ## Features
 
 - Styling with [Vanilla Extract](https://vanilla-extract.style) 💅
+- Built on top of [NextJS](https://nextjs.org) making use of [SSG](https://nextjs.org/docs/basic-features/pages#static-generation-recommended) (Static Site Generation) 🧱
 - Static type checking with [TypeScript](https://www.typescriptlang.org) 🧙‍♂️
 - Custom page loading indicator with [nextjs-progressbar](https://github.com/apal21/nextjs-progressbar) ⏱
 - MDX posts powered by [mdx-loader](https://www.npmjs.com/package/mdx-loader) and [remark-prism](https://github.com/sergioramos/remark-prism) 📖
+- Dynamic social previews for home/posts/individual post pages 🌄
+- Hosted on [Vercel](https://vercel.com) 🚀
 
 ### Reduced motion
 

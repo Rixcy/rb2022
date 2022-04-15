@@ -9,7 +9,7 @@ const projects: Project[] = [
     href: 'https://github.com/Rixcy/cv',
     name: 'CV',
     description:
-      'Personal CV outlining work history and skills. Built with NextJS',
+      'Personal CV outlining work history and skills. Built with NextJS. Styled using TailwindCSS',
   },
   {
     href: 'https://github.com/Rixcy/nvim-lua',
@@ -18,10 +18,14 @@ const projects: Project[] = [
       'Neovim configuration for a full fledged vim based development environment. Hand crafted over several months',
   },
   {
+    href: 'https://github.com/Rixcy/shouldibeoff',
+    name: 'Should I be off?',
+    description:
+      "Simple site for checking if it's a bank holiday in the UK. Built with NextJS. Styled with Vanilla Extract. Using the Government API.",
+  },
+  {
     href: 'https://github.com/Rixcy/airbnb-clone',
     name: 'Airbnb clone',
-    description:
-      'Quick and dirty Airbnb clone, just the front page for now, WIP',
   },
   {
     href: 'https://github.com/Rixcy/rb2022',
@@ -38,10 +42,6 @@ const projects: Project[] = [
   {
     href: 'https://github.com/Rixcy/vite-react-starter',
     name: 'Vite React starter',
-  },
-  {
-    href: 'https://github.com/Rixcy/nextjs-starter',
-    name: 'NextJS starter',
   },
   {
     href: 'https://github.com/Rixcy/blog-rails',

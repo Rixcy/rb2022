@@ -18,9 +18,9 @@ export const ConfigContextProvider = ({
 }) => {
   const name = 'Rick Booth'
   const uppercaseName = name.toUpperCase()
-  const jobTitle = 'Senior Frontend Developer'
+  const jobTitle = 'Technical Architect'
   const baseTitle = 'RICK BOOTH - FRONTEND DEVELOPER'
-  const baseDescription = `${name} is a ${jobTitle} based in Newcastle. Working at Progression on Design Systems and building out the front end for an app specialising in building career frameworks.`
+  const baseDescription = `${name} is a ${jobTitle} based in Newcastle. Working at Builder.ai on delivering and designing custom software and serving as a subject expert for Ruby, React and React Native.`
   const baseOgImageUrl = `https://rb2022.vercel.app/api/og-image?title=${encodeURIComponent(
     baseTitle
   )})`

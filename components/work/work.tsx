@@ -3,10 +3,16 @@ import * as s from './work.css'
 
 const jobs = [
   {
+    title: 'Technical Architect',
+    company: 'Builder.ai',
+    duration: '2024—',
+    href: 'https://builder.ai',
+  },
+  {
     title: 'Senior Frontend Developer',
     company: 'Progression',
-    duration: '2021—  ',
-    href: 'https://progressionapp.com',
+    duration: '2021—23',
+    href: 'https://progression.co',
   },
   {
     title: 'Tech Lead, Head of FE, Web Developer',

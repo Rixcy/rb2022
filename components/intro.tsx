@@ -14,11 +14,10 @@ export const Intro = () => {
         </PageTitle>
         <p className={s.content}>
           {jobTitle} based in Newcastle. Currently working at{' '}
-          <ExternalLink href="https://progressionapp.com">
-            Progression
+          <ExternalLink href="https://builder.ai">
+            Builder.ai
           </ExternalLink>{' '}
-          on Design Systems and building out the front end for an app
-          specialising in building career frameworks.
+          on delivering and designing custom software and serving as a subject expert for Ruby, React and React Native.
         </p>
       </div>
       <div className={s.avatarWrapper}>

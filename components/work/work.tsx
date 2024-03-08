@@ -5,7 +5,7 @@ const jobs = [
   {
     title: 'Technical Architect',
     company: 'Builder.ai',
-    duration: '2024—',
+    duration: '2024— ',
     href: 'https://builder.ai',
   },
   {

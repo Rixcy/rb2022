@@ -14,10 +14,10 @@ export const Intro = () => {
         </PageTitle>
         <p className={s.content}>
           {jobTitle} based in Newcastle. Currently working at{' '}
-          <ExternalLink href="https://builder.ai">
-            Builder.ai
+          <ExternalLink href="https://yearbook.com">
+            Yearbook Machine
           </ExternalLink>{' '}
-          on delivering and designing custom software and serving as a subject expert for Ruby, React and React Native.
+          on delivering and designing custom Yearbook software.
         </p>
       </div>
       <div className={s.avatarWrapper}>

@@ -3,10 +3,16 @@ import * as s from './work.css'
 
 const jobs = [
   {
+    title: 'Full Stack Product Engineer',
+    company: 'zeroheight',
+    duration: '2025- ',
+    href: 'https://zeroheight.com',
+  },
+  {
     title: 'Software Developer',
     company: 'Yearbook Machine',
-    duration: '2024- ',
-    href: 'https://yearbook.com'
+    duration: '2024-25',
+    href: 'https://yearbook.com',
   },
   {
     title: 'Technical Architect',

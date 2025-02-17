@@ -14,10 +14,8 @@ export const Intro = () => {
         </PageTitle>
         <p className={s.content}>
           {jobTitle} based in Newcastle. Currently working at{' '}
-          <ExternalLink href="https://yearbook.com">
-            Yearbook Machine
-          </ExternalLink>{' '}
-          on delivering and designing custom Yearbook software.
+          <ExternalLink href="https://zeroheight.com">zeroheight</ExternalLink>{' '}
+          building design system software.
         </p>
       </div>
       <div className={s.avatarWrapper}>

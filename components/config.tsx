@@ -20,7 +20,7 @@ export const ConfigContextProvider = ({
   const uppercaseName = name.toUpperCase()
   const jobTitle = 'Software Developer'
   const baseTitle = 'RICK BOOTH - SOFTWARE DEVELOPER'
-  const baseDescription = `${name} is a ${jobTitle} based in Newcastle. Working at Yearbook Machine on delivering and designing custom Yearbook software.`
+  const baseDescription = `${name} is a ${jobTitle} based in Newcastle. Working at zeroheight building design system software.`
   const baseOgImageUrl = `https://rb2022.vercel.app/api/og-image?title=${encodeURIComponent(
     baseTitle
   )})`

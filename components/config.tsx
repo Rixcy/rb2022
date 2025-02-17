@@ -21,9 +21,8 @@ export const ConfigContextProvider = ({
   const jobTitle = 'Software Developer'
   const baseTitle = 'RICK BOOTH - SOFTWARE DEVELOPER'
   const baseDescription = `${name} is a ${jobTitle} based in Newcastle. Working at zeroheight building design system software.`
-  const baseOgImageUrl = `https://rb2022.vercel.app/api/og-image?title=${encodeURIComponent(
-    baseTitle
-  )})`
+
+  const baseOgImageUrl = '/base-og.png'
 
   const context = {
     name,

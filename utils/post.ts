@@ -44,11 +44,13 @@ export async function getPostBySlug(slug: string): Promise<Post> {
     result.frontmatter.publishedOn
   ).toISO()
 
+  const { excerpt, ...restFrontmatter } = result.frontmatter
+
   const postData = {
     slug: realSlug,
-    meta: { ...result.frontmatter, publishedOn },
+    meta: { ...restFrontmatter, publishedOn },
     content: result.code,
-    excerpt: result.matter.excerpt,
+    excerpt: excerpt,
   }
   return postSchema.parse(postData)
 }

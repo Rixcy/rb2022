@@ -4,16 +4,14 @@ import invariant from 'tiny-invariant'
 import { useConfig } from '../../components/config'
 import { PostLayout } from '../../components/posts'
 import { getAllPostSlugs, getPostBySlug } from '../../utils/post'
-import { Post } from '../../utils/types'
+import { Post as TPost } from '../../utils/types'
 
-const Post = (props: { postData: Post }) => {
+const Post = (props: { postData: TPost }) => {
   const {
-    postData: { content, meta, excerpt },
+    postData: { content, meta, excerpt, slug },
   } = props
 
   const { uppercaseName } = useConfig()
-
-  const title = encodeURIComponent(meta.title)
 
   return (
     <>
@@ -23,10 +21,7 @@ const Post = (props: { postData: Post }) => {
         </title>
         <meta property="og:title" content={meta.title} />
         <meta property="og:type" content="article" />
-        <meta
-          property="og:image"
-          content={`https://rb2022.vercel.app/api/og-image?title=${title}`}
-        />
+        <meta property="og:image" content={`/${slug}.png`} />
         {excerpt && <meta property="og:description" content={excerpt} />}
       </Head>
       <PostLayout publishedOn={meta.publishedOn} title={meta.title}>
